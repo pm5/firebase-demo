@@ -6,7 +6,7 @@
   <title>Canner demo app</title>
   <meta name="description" content="canner demo app">
   <link href="/statics/style/style.css" rel="stylesheet">
-  <script src="https://s3-ap-northeast-1.amazonaws.com/static.canner.io/canner-api/canner-api.js"></script>
+  <script src="https://static.canner.io/canner-api/stable/sdk.js"></script>
   <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -16,6 +16,7 @@
   <div class="container">
     <h2>It's canner app</h2>
     <div id="posts">
+      loading...
     </div>
   </div>
 </body>
@@ -23,22 +24,24 @@
 <script>
   var db = new CannerApi(<YOUR API KEY>).connect();
 
-  db.collection('posts').find(function(err, docs) {
+  db.array('posts').find(function(err, docs) {
     renderPosts(docs);
   })
 
   function renderPosts(posts) {
+    var result = [];
     posts.forEach(function(post) {
-      addPost(post.title, post.content);
-    })
+      result.push(postTemplate(post.title, post.content));
+    });
+    $("#posts").html(result);
   }
     
-  function addPost(title, content) {
+  function postTemplate(title, content) {
     var post = '<div class="post">';
     post +=      '<h1>' + title + '</h1>';
     post +=      '<div class="content">' + content + '</div>';
     post +=    '</div>';
-    $('#posts').append(post);
+    return post;
   }
 </script>
 </html>
