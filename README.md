@@ -1,9 +1,8 @@
-# canner-document-app-demo
+# app-demo
 
-搭配 canner-handbook 的教學你將可以快速產生一個blog網站
+With [Get Started], you would build a CMS quickly.
 
-## License
-
+## Licenset
 The MIT License (MIT)
 
 Copyright (c) 2017, Canner.

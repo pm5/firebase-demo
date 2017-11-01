@@ -1,9 +1,9 @@
-// 定義標題 type 為 string, desciption 是標題
-var title = CannerTypes.string().description('標題');
-// 定義內容 type 為 string, desciption 是內容, 後台呈現方式是文字編輯器
-var content = CannerTypes.string().description('內容').ui('editor');
+// declares type is string and description is Title
+var title = CannerTypes.string().description('Title');
+// declares the plugin type is string and the description is Content, display as a editor
+var content = CannerTypes.string().description('Content').ui('editor');
 
-// posts 是一個 array 存放了每篇文章，而每篇文章都包含了 title 和 content
-var posts = CannerTypes.array({title, content}).description('文章');
+// posts is an array, each post in it contains title and content
+var posts = CannerTypes.array({title, content}).description('Posts');
 
 module.exports = {posts};
