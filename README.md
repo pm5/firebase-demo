@@ -1,8 +1,8 @@
 # app-demo
 
-With [Get Started], you would build a CMS quickly.
+With [Get Started](https://docs.canner.io/en/get-started), you can build a CMS quickly.
 
-## Licenset
+## License
 The MIT License (MIT)
 
 Copyright (c) 2017, Canner.
