@@ -18,14 +18,14 @@
     <div id="posts">
       loading...
     </div>
+    <a href="/about">
+      About
+    </a>
   </div>
-  <a href="/about">
-    About
-  </a>
 </body>
 
 <script>
-  var db = new CannerApi("<YOUR API KEY>").connect();
+  var db = new CannerApi("YOUR_KEY").connect();
 
   db.array('posts').find(function(err, docs) {
     renderPosts(docs);
