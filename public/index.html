@@ -6,30 +6,53 @@
   <title>Canner demo app</title>
   <meta name="description" content="canner demo app">
   <link href="/statics/style/style.css" rel="stylesheet">
-  <script src="https://static.canner.io/canner-api/stable/sdk.js"></script>
   <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous">
+  </script>
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "API_KEY",
+      authDomain: "AUTH_DOMAIN",
+      databaseURL: "DATABASE_URL",
+      projectId: "PROJECT_ID",
+      storageBucket: "STORAGE_BUCKET",
+      messagingSenderId: "MESSAGING_SENDER_ID"
+    };
+    firebase.initializeApp(config);
+  </script>
 </head>
 <body>
   <div class="container">
-    <h2>It's canner app</h2>
+    <h2>It's canner demo app</h2>
     <div id="posts">
       loading...
     </div>
-    <a href="/about">
+    <a href="/about.html">
       About
     </a>
   </div>
 </body>
-
 <script>
-  var db = new CannerApi("YOUR_KEY").connect();
+  // Anonymous login in firebase
+  firebase.auth().signInAnonymously()
+    .then(function() {
+      firebase.database().ref('posts').once('value')
+        .then(function(snapshot) {
+          renderPosts(snapshot.val());
+        });
+    })
+    .catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
 
-  db.array('posts').find(function(err, docs) {
-    renderPosts(docs);
-  })
+      alert(errorCode + ' - ' + errorMessage)
+    });
 
   function renderPosts(posts) {
     var result = [];

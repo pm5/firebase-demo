@@ -2,6 +2,59 @@
 
 With [Get Started](https://docs.canner.io/en/get-started), you can build a CMS in minutes.
 
+## Steps
+
+1. Create a new project at Firebase
+2. Install [Firebase Tool](https://github.com/firebase/firebase-tools)
+3. Enable Anonymous login at your Firebase project
+4. Install `@canner/cli`
+5. Create project at Canner, set up your Firebase settings on your project.
+6. Update `public/index.html` Firebase config.
+
+```js
+  var config = {
+    apiKey: "API_KEY",
+    authDomain: "AUTH_DOMAIN",
+    databaseURL: "DATABASE_URL",
+    projectId: "PROJECT_ID",
+    storageBucket: "STORAGE_BUCKET",
+    messagingSenderId: "MESSAGING_SENDER_ID"
+  };
+```
+
+6. Deploy your website on [Firebase hosting](https://firebase.google.com/docs/hosting/)
+
+Select project
+
+```
+  firebase init
+```
+
+Deploy host
+
+```
+  firebase deploy
+```
+
+7. Deploy your data to Firebase, and schema to Canner through Canner cli tool.
+
+Deploy schema
+
+```
+  canner schema:deploy
+```
+
+Import data
+
+```
+  canner data:import
+```
+
+## Reference
+
+- Firebase CLI: https://github.com/firebase/firebase-tools
+- Firebase hosting: https://firebase.google.com/docs/hosting/
+
 ## License
 The MIT License (MIT)
 
