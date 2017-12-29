@@ -1,4 +1,4 @@
-# app-demo
+# Firebase-app-demo
 
 With [Get Started](https://docs.canner.io/en/get-started), you can build a CMS using Firebase as backend in minutes.
 
