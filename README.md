@@ -22,7 +22,7 @@ With [Get Started](https://docs.canner.io/en/get-started), you can build a CMS u
   };
 ```
 
-6. Deploy your website on [Firebase hosting](https://firebase.google.com/docs/hosting/)
+#### 7. Deploy your website on [Firebase hosting](https://firebase.google.com/docs/hosting/)
 
 Select project
 
