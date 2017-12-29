@@ -41,7 +41,7 @@ Deploy host
   firebase deploy
 ```
 
-7. Deploy your data to Firebase, and schema to Canner through Canner cli tool.
+#### 8. Deploy your data to Firebase, and schema to Canner through Canner cli tool.
 
 Deploy schema
 
