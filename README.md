@@ -1,15 +1,15 @@
 # app-demo
 
-With [Get Started](https://docs.canner.io/en/get-started), you can build a CMS in minutes.
+With [Get Started](https://docs.canner.io/en/get-started), you can build a CMS using Firebase as backend in minutes.
 
 ## Steps
 
-1. Create a new project at Firebase
-2. Install [Firebase Tool](https://github.com/firebase/firebase-tools)
-3. Enable Anonymous login at your Firebase project
-4. Install `@canner/cli`
-5. Create project at Canner, set up your Firebase settings on your project.
-6. Update `public/index.html` Firebase config.
+#### 1. Create a new project at Firebase
+#### 2. Install [Firebase Tool](https://github.com/firebase/firebase-tools)
+#### 3. Enable Anonymous login at your Firebase project
+#### 4. Install `@canner/cli`
+#### 5. Create project at Canner, set up your Firebase settings on your project.
+#### 6. Update `public/index.html` Firebase config.
 
 ```js
   var config = {
