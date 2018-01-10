@@ -14,7 +14,7 @@ npm i -g @canner/cli
 ```
 
 #### 5. Create project at Canner, set up your Firebase settings on your project.
-#### 6. Update `public/index.html` Firebase config.
+#### 6. Update `public/index.html` & `canner.schema.js` Firebase config.
 
 ```js
   var config = {
