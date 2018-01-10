@@ -13,7 +13,7 @@ With [Get Started](https://docs.canner.io/en/get-started), you can build a CMS u
 npm i -g @canner/cli
 ```
 
-#### 5. Create project at Canner, set up your Firebase settings on your project.
+#### 5. Create project at Canner
 #### 6. Update `public/index.html` & `canner.schema.js` Firebase config.
 
 ```js
