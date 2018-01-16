@@ -27,7 +27,11 @@ npm i -g @canner/cli
   };
 ```
 
-#### 7. Deploy your website on [Firebase hosting](https://firebase.google.com/docs/hosting/)
+#### 7. Download firebase private key
+
+go to "settings > service account" download private key, and put it in `cert` folder.
+
+#### 8. Deploy your website on [Firebase hosting](https://firebase.google.com/docs/hosting/)
 
 Select project
 
