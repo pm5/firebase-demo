@@ -43,7 +43,7 @@
     .then(function() {
       firebase.database().ref('posts').once('value')
         .then(function(snapshot) {
-          renderPosts(snapshot.val());
+          renderPosts(snapshot);
         });
     })
     .catch(function(error) {
@@ -57,11 +57,12 @@
   function renderPosts(posts) {
     var result = [];
     posts.forEach(function(post) {
+      post = post.val();
       result.push(postTemplate(post.title, post.content));
     });
     $("#posts").html(result);
   }
-    
+
   function postTemplate(title, content) {
     var post = '<div class="post">';
     post +=      '<h1>' + title + '</h1>';
